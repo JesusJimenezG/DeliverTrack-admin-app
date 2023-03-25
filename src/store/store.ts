@@ -1,8 +1,9 @@
 import { writable } from 'svelte/store';
-import type { BotMarkers } from '../types';
+import type { BotMarkers, BotsStoreValue } from '../types';
 
 const botMarkers: BotMarkers = [
 	{
+		id: '1',
 		type: 'Robot',
 		properties: {
 			status: 'Idle',
@@ -14,6 +15,7 @@ const botMarkers: BotMarkers = [
 		}
 	},
 	{
+		id: '2',
 		type: 'Robot',
 		properties: {
 			status: 'Idle',
@@ -25,6 +27,7 @@ const botMarkers: BotMarkers = [
 		}
 	},
 	{
+		id: '3',
 		type: 'Robot',
 		properties: {
 			status: 'Idle',
@@ -37,6 +40,7 @@ const botMarkers: BotMarkers = [
 	}
 ];
 
-const markersStore = writable(botMarkers);
+// const markersStore = writable(botMarkers);
+const botsStore = writable<BotsStoreValue>();
 
-export { markersStore };
+export { botsStore };

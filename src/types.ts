@@ -7,7 +7,10 @@ export type Bot = {
 	};
 };
 
+export type BotsStoreValue = Record<string, Bot>;
+
 export type BotMarkers = {
+	id: string;
 	type: string;
 	properties: { status: string; iconSize: number[] };
 	geometry: { type: string; coordinates: number[] };

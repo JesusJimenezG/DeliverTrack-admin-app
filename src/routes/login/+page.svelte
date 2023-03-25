@@ -19,11 +19,10 @@
 			method: 'POST',
 			credentials: 'include',
 			headers: {
-				'Content-Type': 'application/json',
+				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({ email, password })
 		});
-		
 
 		const { data } = await response.json();
 		if (response.status === 200) {
